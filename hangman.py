@@ -48,6 +48,7 @@ while True:
         print("--------")
         print(" ".join(answer))
         print("YOU WIN!")
+        input("Press Enter to exit")
         break
 
     elif bad_guess >= len(hangman_art) - 1:
