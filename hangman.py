@@ -9,7 +9,7 @@ hangman_art = {0: ("     ", "     ", "     "),
                5: ("   o ", "  /|\\", "  /  "),
                6: ("   o ", "  /|\\", "  / \\")}
 
-words: tuple = ('apple', 'bus', 'car', 'cat', 'dog', 'earth')
+words: tuple = ('apple', 'bus', 'car', 'cat', 'dog', 'earth', 'house', 'school', 'music')
 answer: str = random.choice(words)
 hint: list = ['_'] * len(answer)        # the length of answer in underscores
 bad_guess: int = 0
