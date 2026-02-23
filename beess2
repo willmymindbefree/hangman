@@ -1,0 +1,40 @@
+# match input('would you like a car wash? (yes/no): ').lower():
+#     case 'yes':
+#         match input('what type of wash would you like? (basic, deluxe, premium): ').lower():
+#             case 'basic':
+#                 print('you chose the basic wash. that will be $5')
+#             case 'deluxe':
+#                 print('you chose the deluxe wash. that will be $10')
+#             case 'premium':
+#                 print('you chose the premium wash. that will be $15')
+#     case 'no':
+#         print('okay, have a nice day!')
+
+# Hangman in Python
+import random
+
+hangman_art = {0: ("     ", "     ", "     "),
+               1: ("   o ", "     ", "     "),
+               2: ("   o ", "   | ", "     "),
+               3: ("   o ", "  /| ", "     "),
+               4: ("   o ", "  /|\\", "     "),
+               5: ("   o ", "  /|\\", "  /  "),
+               6: ("   o ", "  /|\\", "  / \\")}
+
+match input("Pick a difficulty: easy, regular, hard: ").lower():
+    case "easy":
+        with open("easy_words.txt", "r") as file:
+            lines1 = file.readlines()
+            answer = random.choice(lines1).strip()
+    case "regular":
+        with open("regular_words.txt", "r") as file:
+            lines2 = file.readlines()
+            answer = random.choice(lines2).strip()
+    case "hard":
+        with open("hard_words.txt", "r") as file:
+            lines3 = file.readlines()
+            answer = random.choice(lines3).strip()
+
+
+
+print(answer)
